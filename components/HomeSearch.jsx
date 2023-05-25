@@ -18,7 +18,7 @@ const HomeSearch = () => {
     const randomWord = await getRandomWord();
     setRandomWordLoading(false);
     if (!randomWord) return;
-    // router.push(`/search/web?searchTerm=${randomWord}`);
+    router.push(`/search/web?searchTerm=${randomWord}`);
   };
   return (
     <>
