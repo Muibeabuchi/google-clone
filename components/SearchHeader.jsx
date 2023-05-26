@@ -8,7 +8,7 @@ import SearchHeaderOptions from "./SearchHeaderOptions";
 
 const SearchHeader = () => {
   return (
-    <header className="sticky top-0 bg-white w-full ">
+    <header className="border-b border-gray-200 pb-1 sticky top-0 bg-white w-full ">
       <div className="flex w-full p-3 sm:p-6 items-center justify-between">
         <Link href={"/"}>
           <Image
