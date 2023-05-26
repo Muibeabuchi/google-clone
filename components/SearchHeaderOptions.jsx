@@ -16,7 +16,7 @@ export default function SearchHeaderOptions() {
   }
   console.log(pathname, path, params);
   return (
-    <div className="flex items-center select-none   space-x-3 ml-[10%] text-gray-700 text-sm">
+    <div className="flex items-center select-none   space-x-3 md:ml-[10%] ml-10 text-gray-700 text-sm">
       <div
         className={`${
           path === "web" && "!border-blue-400"
