@@ -2,11 +2,15 @@ import WebSearchResults from "@/components/WebSearchResults";
 import Link from "next/link";
 import React from "react";
 
-const SearchWebPage = async ({ searchParams: { searchTerm } }) => {
-  console.log(searchTerm);
+const SearchWebPage = async ({ searchParams }) => {
+  const startIndex = +searchParams.start || 1;
+  const searchTerm = searchParams?.searchTerm;
+
+  // console.log(startIndex);
   const response = await fetch(
-    `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_CONTEXT_KEY}&q=${searchTerm}`
+    `https://www.googleapis.com/customsearch/v1?key=${process.env.GOOGLE_API_KEY}&cx=${process.env.GOOGLE_CONTEXT_KEY}&q=${searchTerm}&start=${startIndex}`
   );
+  // console.log(response);
   if (!response.ok) throw new Error("Failed to fetch the data");
   const data = await response.json();
   const results = data?.items;
@@ -26,7 +30,7 @@ const SearchWebPage = async ({ searchParams: { searchTerm } }) => {
       </>
     );
   }
-  console.log(data);
+  // console.log(data);
   return <>{results && <WebSearchResults results={data} />}</>;
 };
 

@@ -14,7 +14,7 @@ export default function SearchHeaderOptions() {
   function selectTab(tab) {
     router.push(`/search/${tab}?searchTerm=${params}`);
   }
-  console.log(pathname, path, params);
+  // console.log(pathname, path, params);
   return (
     <div className="flex items-center select-none   space-x-3 md:ml-[10%] ml-10 text-gray-700 text-sm">
       <div

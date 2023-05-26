@@ -11,7 +11,7 @@ export async function getRandomWord() {
   try {
     const response = await fetch(url, options);
     const result = await response.text();
-    console.log(result);
+    // console.log(result);
     return result;
     console.log(result);
   } catch (error) {

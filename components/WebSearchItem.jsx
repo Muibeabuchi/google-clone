@@ -3,7 +3,7 @@ import React from "react";
 import parse from "html-react-parser";
 
 const WebSearchItem = ({ result }) => {
-  console.log(result?.link);
+  // console.log(result?.link);
   return (
     <div className="mb-8 max-w-xl">
       <div className="group flex flex-col justify-center">

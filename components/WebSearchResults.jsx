@@ -1,5 +1,6 @@
 import React from "react";
 import WebSearchItem from "./WebSearchItem";
+import PaginationButtons from "./PaginationButtons";
 
 const WebSearchResults = ({ results }) => {
   return (
@@ -11,6 +12,7 @@ const WebSearchResults = ({ results }) => {
       {results?.items?.map((result) => (
         <WebSearchItem key={result?.title} result={result} />
       ))}
+      <PaginationButtons />
     </div>
   );
 };
